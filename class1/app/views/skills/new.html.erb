@@ -1,0 +1,6 @@
+<h1>Formulario</h1>
+
+<%= form_with url: "/skills/view", data: {turbo: "false"} do |form| %>
+  <%= form.text_field :data %>
+  <%= form.submit "Enviar" %>
+<% end %>
