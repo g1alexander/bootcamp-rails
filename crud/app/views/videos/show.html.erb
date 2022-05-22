@@ -1,0 +1,5 @@
+<h2><%= @video.title %></h2>
+
+<%= link_to "editar", edit_video_path(id:@video.id) %> 
+
+<%= link_to "eliminar", video_delete_path(id:@video.id), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %> 
