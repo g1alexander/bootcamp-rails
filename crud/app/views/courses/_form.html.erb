@@ -1,0 +1,21 @@
+<%= form_with model:@course do |f| %>
+  <div>
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </div>
+  <div>
+    <%= f.label :description %>
+    <%= f.text_area :description %>
+  </div>
+  <div>
+    <%= f.label :visible, "visible" %>
+    <%= f.check_box :visible %>
+  </div>
+  <div>
+    <%= f.label :published, "published" %>
+    <%= f.check_box :published %>
+  </div>
+  <div>
+    <%= f.submit %>
+  </div>
+<% end %>
