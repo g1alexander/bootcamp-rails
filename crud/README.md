@@ -1,24 +1,18 @@
-# README
+# Notas
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+video = Video.new
+video.errors
+video.errors.messages
+video.valid? - si es valido para guadar
+present? - si hay contenido
+video.new_record? - no se ha guardado
+video.persisted? - si se ha guadardo
+video.save(validate: false) - saltar validaciones
 
-Things you may want to cover:
+los callbacks - notificaciones via slack, generar pdf, email, actualizar otras tablas
 
-* Ruby version
+la diferencia entre el metodo save y create es que create solo se ejecuta una vez debido a que un registro solo se guarda en base solo una vez y save siempre se ejecuta que modifica los datos del registro
 
-* System dependencies
+Video.where(description: nil).delete_all - eliminar todo
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+signo de ? y ! se diferencian en que el ? valida y el ! se salta la validacion, cuando valida devuelve un resultado, el ! regresa una excepcion
